@@ -93,6 +93,9 @@ only be reached from `[0, 0]`
 
 When you are ready to submit:
 
-1. Delete the `node_modules` directory
-2. Zip up your renamed folder
-3. Upload it
+1. Re-run all unit tests and fix any syntax errors that are crashing the tests. If
+the unit tests crash, or do not run, you will receive a zero for the coding
+portion of the assessment
+2. Delete the `node_modules` directory
+3. Zip up your renamed folder
+4. Upload it

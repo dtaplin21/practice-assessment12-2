@@ -45,10 +45,10 @@ describe('pathTraversal', () => {
   ];
 
   const mountain_2 = [
-    [1, 1, 9, 1, 1],
-    [1, 6, 5, 4, 8],
+    [7, 8, 9, 1, 1],
+    [1, 6, 5, 2, 8],
     [0, 1, 5, 1, 3],
-    [1, 2, 3, 4, 1]
+    [1, 4, 3, 4, 0]
   ];
 
   it('returns true for a traversable path to the top', () => {
@@ -60,13 +60,17 @@ describe('pathTraversal', () => {
 
   });
 
-    it('returns false if a path does not reach the top', () => {
+  it('returns true for a traversable path to the top and returns false for a path that does not reach the top', () => {
 
-    let visited = new Set();
-    const notTraversable = pathTraversal([2, 0], mountain_2, visited, 9);
+    let visited1 = new Set();
+    const traversable = pathTraversal([3, 4], mountain_2, visited1, 9);
+
+    let visited2 = new Set();
+    const notTraversable = pathTraversal([2, 0], mountain_2, visited2, 9);
+
+    expect(traversable).to.equal(true);
 
     expect(notTraversable).to.equal(false);
-
   });
 
 });
